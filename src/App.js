@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PourContainer from './components/PourContainer'
+
+// todo: move this to dedicate utility!
+// function test() { 
+//   const options = {
+//     acceptAllDevices: true,
+    
+//   }
+//   navigator.bluetooth.requestDevice(options).then(device => {
+//     device.gatt.connect()
+//     .then(c => {
+//       const a = 's';
+//     })
+      
+//     .catch(c => c.console.log(c))
+//   })
+// }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <div className='outermost centerContent'>
+        <PourContainer></PourContainer>
+      </div>
+      
+
+
   );
 }
 
