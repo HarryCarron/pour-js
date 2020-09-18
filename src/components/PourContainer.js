@@ -16,7 +16,6 @@ function PourContainer() {
     brewCongfigView.forEach(bc => {
       const grad = ctx.createRadialGradient(...bc.coords);
       [0, 1].forEach(v => {
-        const col = RGBcolor(v, ...bc.color);
         grad.addColorStop(v, RGBcolor(v, ...bc.color))
       }
         );
