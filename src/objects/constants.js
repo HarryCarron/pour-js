@@ -1,0 +1,1 @@
+export const dim = 500;

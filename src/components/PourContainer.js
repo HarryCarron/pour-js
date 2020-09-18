@@ -3,6 +3,8 @@ import InnerPourContainer from './InnerPourContainer';
 import { brewCongfigView } from './../objects/viewGradients';
 import { RGBcolor } from './../objects/rgbColor';
 
+import { SetBrewConfigurationGradBG } from "./../objects/viewGradients";
+
 function PourContainer() {
 
   const dim = 500;
@@ -12,19 +14,8 @@ function PourContainer() {
   const assignCTX = () => ctx = canvasRef.current.getContext('2d');
 
   const renderBackground = () => {
-
-    brewCongfigView.forEach(bc => {
-      const grad = ctx.createRadialGradient(...bc.coords);
-      [0, 1].forEach(v => {
-        grad.addColorStop(v, RGBcolor(v, ...bc.color))
-      }
-        );
-      ctx.fillStyle = grad;
-      ctx.fillRect(0,0, dim, dim);
-    })
-
+    SetBrewConfigurationGradBG(ctx);
   }
-
 
   useEffect(
     () => {
@@ -51,7 +42,7 @@ function PourContainer() {
       <div 
       style={pourContainerStyle}
       className='centerContent'>
-        <canvas 
+      <canvas 
         height={dim}
         width={dim}
         ref={canvasRef}>
