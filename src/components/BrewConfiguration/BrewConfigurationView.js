@@ -8,7 +8,9 @@ function InnerPourContainer() {
 
   const InnerPourContainerStyle = {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    height: '100%',
+    width: '100%',
   }
 
   return (

@@ -1,7 +1,8 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,7 +24,17 @@ code {
   align-items: center;     /* center items horizontally, in this case */
 }
 
+.vertCenter {
+  display: flex;
+  align-items: center;
+}
+
+
 .h-w-100 {
   height: 100%;
   width: 100%;
+}
+
+.h-100 {
+  height: 100%;
 }

@@ -1,3 +1,3 @@
-export const topBar = { height: '25%' }
-export const middleBar = { height: '50%' }
-export const bottomBar = { height: '25%' }
+export const topBar = { height: '20%' }
+export const middleBar = { height: '60%' }
+export const bottomBar = { height: '20%' }

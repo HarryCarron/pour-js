@@ -5,8 +5,11 @@ function InnerPourContainer() {
 
 
   const InnerPourContainerStyle = {
-    height: '80%',
-    width: '80%',
+    height: '500px',
+    width: '500px',
+    position: 'absolute',
+    top: 0,
+    left:0
   }
 
   return (
