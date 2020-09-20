@@ -7,3 +7,10 @@ export function prodMethodChanged(newProdMethod) {
         newProdMethod
     })
 }
+
+export function activeViewChanged(newActiveView) {
+    Dispatch.dispatch({
+        actionType: constants.ACTIVE_VIEW_CHANGED,
+        newActiveView
+    })
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function DisplayValue(props) {
 
@@ -10,11 +11,10 @@ function DisplayValue(props) {
     const labelStyle = {
         height: '20%',
         fontSize: '2em',
-        marginLeft: '50px'
     }
 
     const valueStyle = {
-        fontSize: '7em'
+        fontSize: '5em'
     }
 
     const valueContainerStyle = {
@@ -23,24 +23,23 @@ function DisplayValue(props) {
 
     const measureStyle = {
         fontSize: '2em',
-        marginLeft: '30px'
+        marginLeft: '10px'
     }
 
   return (
-
         <div className='h-w-100' style={baseStyle}>
             <div style={ labelStyle } className='vertCenter'>
-                {props.label}
+                {props.label} {
+                    props.icon && <span style={{marginLeft: '10px'}}><FontAwesomeIcon icon={ props.icon } /></span>
+                }
             </div>
-            <div style={ valueContainerStyle }className='centerContent'>
+            <div style={ valueContainerStyle }>
                 <div>
                     <span style={valueStyle}>{props.value || 0}</span>
                     <span style={measureStyle}>g</span>
                 </div> 
-
             </div>
         </div>
-
   );
 }
 

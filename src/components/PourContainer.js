@@ -21,7 +21,7 @@ function PourContainer() {
     () => {
       if (!ctx) {
         assignCTX();
-        renderBackground();
+        // renderBackground();
       }
     })
 

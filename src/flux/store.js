@@ -26,6 +26,9 @@ Dispatch.register(action => {
     case Constants.CHANGED_PROD_METHOD:
       store.emitChange();
       break;
+    case Constants.CHANGED_ACTIVE_VIEW:
+      store.emitChange();
+      break;
       default: // nothing
   }
 });
