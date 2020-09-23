@@ -4,7 +4,7 @@ import MiddleBar from './MiddleBar';
 import TopBar from './TopBar';
 import * as defaultStyle from './../../commonStyles/layout';
 
-function InnerPourContainer() {
+function BrewConfigurationContainer() {
 
   const InnerPourContainerStyle = {
     display: 'flex',
@@ -22,4 +22,4 @@ function InnerPourContainer() {
   );
 }
 
-export default InnerPourContainer;
+export default BrewConfigurationContainer;

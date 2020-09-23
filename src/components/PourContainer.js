@@ -1,9 +1,9 @@
 import React, { createRef, useEffect } from 'react';
 import InnerPourContainer from './InnerPourContainer';
-import { brewCongfigView } from './../objects/viewGradients';
-import { RGBcolor } from './../objects/rgbColor';
+// import { brewCongfigView } from './../objects/viewGradients';
+// import { RGBcolor } from './../objects/rgbColor';
 
-import { SetBrewConfigurationGradBG } from "./../objects/viewGradients";
+// import { SetBrewConfigurationGradBG } from "./../objects/viewGradients";
 
 function PourContainer() {
 
@@ -13,9 +13,8 @@ function PourContainer() {
 
   const assignCTX = () => ctx = canvasRef.current.getContext('2d');
 
-  const renderBackground = () => {
-    SetBrewConfigurationGradBG(ctx);
-  }
+  // const renderBackground = () => SetBrewConfigurationGradBG(ctx);
+
 
   useEffect(
     () => {

@@ -1,32 +1,47 @@
 import { EventEmitter } from "events";
 import Dispatch from "./dispatcher";
 
-import * as Constants from "./constants";
+import { PourActions } from "./constants";
 
 const CHANGE_EVENT = "change";
 
+
+
 class PourStore extends EventEmitter {
-  addChangeListener(callback) {
+
+  private current_view = null
+
+  addChangeListener(callback: () => void) {
     this.on(CHANGE_EVENT, callback);
   }
 
-  removeChangeListener(callback) {
+  removeChangeListener(callback: () => void) {
     this.removeListener(CHANGE_EVENT, callback);
   }
 
   emitChange() {
     this.emit(CHANGE_EVENT);
   }
+
+ getCurrentView() {
+   return this.current_view;
+ }
+
+ setCurrentView(v: any) {
+  this.current_view = v;
+}
+
 }
 
 const store = new PourStore();
 
 Dispatch.register(action => {
-  switch (action.actionType) {
-    case Constants.CHANGED_PROD_METHOD:
+  switch ((action as any).actionType) {
+    case PourActions.CHANGED_PROD_METHOD:
       store.emitChange();
       break;
-    case Constants.CHANGED_ACTIVE_VIEW:
+    case PourActions.ACTIVE_VIEW_CHANGED:
+      store.setCurrentView((action as any).newActiveView);
       store.emitChange();
       break;
       default: // nothing
