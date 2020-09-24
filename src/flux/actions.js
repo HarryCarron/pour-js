@@ -1,10 +1,10 @@
 import Dispatch from './dispatcher';
 import { PourActions } from './constants';
 
-export function prodMethodChanged(newProdMethod) {
+export function brewTypeChanged(newBrewMethod) {
     Dispatch.dispatch({
-        actionType: PourActions.NEW_PROD_METHOD,
-        newProdMethod
+        actionType: PourActions.BREW_METHOD_CHANGED,
+        newBrewMethod
     })
 }
 

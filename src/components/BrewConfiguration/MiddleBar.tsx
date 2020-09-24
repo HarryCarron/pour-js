@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import DisplayValue from "./DisplayValue";
-import { faWater } from '@fortawesome/free-solid-svg-icons'
+import store from "./../../flux/store";
 
 interface MiddleBarProps{
   height: string;
@@ -10,18 +10,23 @@ const MiddleBar: React.FunctionComponent<MiddleBarProps> = (props: MiddleBarProp
 
   const flex = {display: 'flex'};
 
+  const storeChanged = () => setBrewWeights(store.getBrewWeights());
+
+  useEffect(
+    () => {
+      store.addChangeListener(storeChanged);
+    }
+  );
+
+  const [brewWeights, setBrewWeights] = useState([0, 0]);
+
   return (
         <div style={{...props.height as {}, ...flex}}>
-          <div className='h-100' style={{width: '45%'}}>
-            <DisplayValue label={'Coffee'} value={12}/>
+          <div className='h-100' style={{width: '50%'}}>
+            <DisplayValue label={'Coffee'} value={brewWeights[0]}/>
           </div>
-          <div style={{width: '10%'}}>
-            <svg height='300' width='50'>
-              <line x1="10" y1="290" x2="40" y2="10" stroke-width='5' stroke = 'rgb(255,255,255)'/>
-            </svg>
-          </div>
-          <div className='h-100' style={{width: '45%'}}>
-            <DisplayValue label={'Water'} value={32} icon={ faWater }/>
+          <div className='h-100' style={{width: '50%'}}>
+            <DisplayValue label={'Water'} value={brewWeights[1]}/>
           </div>
         </div>
   );

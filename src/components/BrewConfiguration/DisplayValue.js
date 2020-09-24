@@ -11,10 +11,12 @@ function DisplayValue(props) {
     const labelStyle = {
         height: '20%',
         fontSize: '2em',
+        marginLeft: '40px'
     }
 
     const valueStyle = {
-        fontSize: '5em'
+        fontSize: '5em',
+        marginLeft: '40px'
     }
 
     const valueContainerStyle = {

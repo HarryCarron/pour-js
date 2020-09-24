@@ -30,12 +30,13 @@ function PourContainer() {
     height: `${dim}px`,
     width: `${dim}px`,
     borderRadius: '70px',
-    backgroundColor: '#36353e',
-    boxShadow: '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)',
+    backgroundColor: '#222223',
+    boxShadow: 'rgba(0, 0, 0, 0.3) 0px 17px 33px, rgba(0, 0, 0, 0.3) 0px 15px 12px',
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
-    position: 'relative'
+    position: 'relative',
+    border: '2px solid #e0e0e0'
   }
 
   return (

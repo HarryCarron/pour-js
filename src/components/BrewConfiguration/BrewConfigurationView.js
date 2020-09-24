@@ -9,8 +9,8 @@ function BrewConfigurationContainer() {
   const InnerPourContainerStyle = {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%',
-    width: '100%',
+    height: '500px',
+    width: '500px',
   }
 
   return (
